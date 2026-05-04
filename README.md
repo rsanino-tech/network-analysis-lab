@@ -2,45 +2,44 @@
 
 ## Objective
 
-This project focuses on understanding how systems communicate, how network behavior impacts performance, and how issues can be identified through structured observation and analysis.
+Experiment with basic network analysis techniques and document how systems communicate, respond, and behave across a network.
 
----
+## Overview
 
-## Context
+This project focuses on beginner-to-intermediate network analysis. It starts with simple latency testing and can expand into packet capture, service discovery, and deeper troubleshooting workflows.
 
-In many environments, performance issues are not isolated to a single system. They are often the result of interactions between systems, services, and network conditions.
+## Prerequisites
 
-This project explores those relationships by breaking down how systems connect and how data moves between them.
+- Python 3.x
+- A terminal with access to the `ping` command
+- Permission to test the hosts or networks being analyzed
 
----
+## Usage
+
+Run `ping_test.py` with one or more hostnames or IP addresses:
+
+```bash
+python3 ping_test.py example.com 8.8.8.8
+```
+
+The script sends four ping requests to each host and prints the average round-trip time when available. If a host is unreachable or the command fails, the script prints a basic error message and continues checking the remaining hosts.
 
 ## Actions Taken
 
-- Reviewed and documented core networking concepts  
-- Observed system communication patterns  
-- Analyzed how different components interact across a network  
-- Connected technical observations to real-world operational impact  
-- Organized findings into structured documentation  
-
----
-
-## Analysis
-
-Rather than focusing only on tools, this project emphasizes understanding how systems behave when they communicate. By focusing on patterns and interactions, it becomes easier to identify where issues may originate.
-
-This approach helps move beyond surface-level troubleshooting into deeper system understanding.
-
----
-
-## Outcome
-
-The project demonstrates the ability to analyze system interactions, understand network behavior, and document findings in a structured and practical way.
-
----
+- Created a Python-based ping test utility
+- Added basic unreachable-host handling
+- Documented prerequisites and usage
+- Preserved the project focus on practical network behavior analysis
 
 ## Key Takeaways
 
-- Network behavior directly impacts system performance  
-- Understanding interactions between systems is critical for troubleshooting  
-- Clear documentation improves analysis and communication  
-- Breaking complex systems into smaller parts makes them easier to understand  
+- Latency testing helps show how quickly a host responds
+- Simple command-line tools can provide useful network troubleshooting signals
+- Clear documentation makes repeated tests easier to run and compare
+
+## Next Steps
+
+- Add packet capture examples
+- Explore more advanced latency analysis
+- Store test results in structured logs
+- Add safer examples for local-only network testing
