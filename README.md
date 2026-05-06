@@ -1,45 +1,196 @@
-# Network Analysis Lab
+# Sentinel Core
 
-## Objective
+Sentinel Core is my local-first household infrastructure watch partner.
 
-Experiment with basic network analysis techniques and document how systems communicate, respond, and behave across a network.
+This project started as a vibe coding session, but the vision behind it was serious from the beginning.
 
-## Overview
+Every major decision, workflow, security boundary, UI direction, and monitoring philosophy came from me. AI was not the architect. AI was my paint brush.
 
-This project focuses on beginner-to-intermediate network analysis. It starts with simple latency testing and can expand into packet capture, service discovery, and deeper troubleshooting workflows.
+I used AI to iterate faster, prototype faster, and refine ideas faster, but the ideas, research, expectations, and standards were always mine.
 
-## Prerequisites
+The goal was never to build another generic AI dashboard.
 
-- Python 3.x
-- A terminal with access to the `ping` command
-- Permission to test the hosts or networks being analyzed
+The goal was to create a private, local-first household monitoring system that helps me understand what is happening inside my own environment without depending on cloud surveillance or reckless automation.
 
-## Usage
+---
 
-Run `ping_test.py` with one or more hostnames or IP addresses:
+# What Sentinel Core Is
 
-```bash
-python3 ping_test.py example.com 8.8.8.8
+Sentinel Core is a Python-based local monitoring and network awareness system designed for:
+
+- local-first monitoring
+- local knowledge-aware AI assistance
+- browser-based operational awareness
+- household network visibility
+- troubleshooting workflows
+- local reports and operational memory
+- strict internet boundaries
+
+The system is designed to:
+
+- identify visible LAN devices
+- monitor gateway and DNS behavior
+- summarize active connections
+- monitor listening ports
+- store local reports
+- surface unusual changes
+- support troubleshooting workflows
+- maintain long-term household infrastructure awareness
+
+This is not intended to replace professional SIEM, EDR, or enterprise monitoring platforms.
+
+This is a personal infrastructure watch partner for my own environment.
+
+Use it only on networks you own or are authorized to monitor.
+
+---
+
+# AI-Assisted Build Philosophy
+
+I vibe coded this.
+
+That does not mean careless.
+
+It means I used AI intentionally to accelerate development while I focused on architecture, security boundaries, operational thinking, UX direction, and product vision.
+
+AI helped me move faster.
+
+But:
+
+- the ideas were mine
+- the research was mine
+- the expectations were mine
+- the product direction was mine
+- and the standards were mine
+
+I did not stop until the system behaved the way I wanted.
+
+---
+
+# Local Knowledge System
+
+The `knowledge/` folder is the heart of Sentinel Core.
+
+The most important idea behind this project was creating a structured local knowledge environment that the AI can pull from.
+
+This knowledge is not only for troubleshooting.
+
+It is also for:
+
+- long-term monitoring
+- device awareness
+- operational memory
+- historical understanding
+- known-services tracking
+- household infrastructure context
+
+Instead of acting like a generic chatbot with no memory of the environment, Sentinel Core uses local context to understand the home it is monitoring.
+
+```text
+knowledge/
+├── index.md
+├── device-registry.md
+├── known-services.md
+├── runbook.md
+├── troubleshooting-notes.md
+└── troubleshooting-pack.md
 ```
 
-The script sends four ping requests to each host and prints the average round-trip time when available. If a host is unreachable or the command fails, the script prints a basic error message and continues checking the remaining hosts.
+---
 
-## Actions Taken
+# Security Model
 
-- Created a Python-based ping test utility
-- Added basic unreachable-host handling
-- Documented prerequisites and usage
-- Preserved the project focus on practical network behavior analysis
+Sentinel Core is intentionally conservative.
 
-## Key Takeaways
+Current security boundaries:
 
-- Latency testing helps show how quickly a host responds
-- Simple command-line tools can provide useful network troubleshooting signals
-- Clear documentation makes repeated tests easier to run and compare
+- local-only binding by default (`127.0.0.1`)
+- no direct public internet exposure
+- no autonomous internet browsing
+- no reckless scanning behavior
+- optional token-based LAN access
+- generated local reports ignored by Git
+- online research requests written to an outbox instead of automatically executed
 
-## Next Steps
+Example local-only startup:
 
-- Add packet capture examples
-- Explore more advanced latency analysis
-- Store test results in structured logs
-- Add safer examples for local-only network testing
+```bash
+python3 -m homenet_agent serve --host 127.0.0.1 --port 8773
+```
+
+Do not expose Sentinel Core directly to the public internet.
+
+---
+
+# Browser Control Room
+
+Sentinel Core includes a premium-style browser control room inspired by Velvet Core principles:
+
+- dark premium interface
+- charcoal surfaces
+- brass accents
+- teal highlights
+- operational clarity over clutter
+
+The dashboard may include:
+
+- system health
+- total signals
+- completed checks
+- active connections
+- failed checks and alerts
+- critical alert tracking
+- operational summaries
+- reports and logs
+- knowledge access
+
+The goal is not to talk to a chatbot.
+
+The goal is to interact with a household infrastructure partner.
+
+---
+
+# Project Structure
+
+```text
+.
+├── README.md
+├── knowledge/
+├── reports/
+├── data/
+├── outbox/
+└── homenet_agent/
+```
+
+---
+
+# Roadmap
+
+Things I want next:
+
+- trusted device naming
+- stronger device identity mapping
+- alert trend analysis
+- encrypted local notes
+- deeper knowledge search
+- macOS notifications
+- stricter LAN auth sessions
+- cleaner package naming
+- improved operational summaries
+- stronger dashboard polish
+
+---
+
+# My Rule For Sentinel
+
+Sentinel Core should be useful without being reckless.
+
+It should help me understand my environment without overwhelming me.
+
+It should surface what matters.
+
+It should stay quiet when things are normal.
+
+And it should ask for outside help carefully instead of pretending autonomy is intelligence.
+
+That is the Velvet Core standard.
