@@ -1,90 +1,128 @@
 # Sentinel Core
 
-Sentinel Core is my local-first household infrastructure watch partner.
+Sentinel Core is a local-first infrastructure awareness and monitoring system designed to help understand, manage, and troubleshoot a personal network environment with clarity, restraint, and operational context.
 
-This project started as a vibe coding session, but the vision behind it was serious from the beginning.
+The project combines:
 
-Every major decision, workflow, security boundary, UI direction, and monitoring philosophy came from me. AI was not the architect. AI was my paint brush.
+- local network awareness
+- browser-based operational visibility
+- structured infrastructure memory
+- AI-assisted troubleshooting
+- and controlled automation
 
-I used AI to iterate faster, prototype faster, and refine ideas faster, but the ideas, research, expectations, and standards were always mine.
-
-The goal was never to build another generic AI dashboard.
-
-The goal was to create a private, local-first household monitoring system that helps me understand what is happening inside my own environment without depending on cloud surveillance or reckless automation.
+without depending on cloud surveillance, reckless scanning behavior, or fully autonomous decision-making.
 
 ---
 
-# What Sentinel Core Is
+# Why I Built It
 
-Sentinel Core is a Python-based local monitoring and network awareness system designed for:
+Most consumer monitoring tools either:
+- expose too much to the cloud,
+- overwhelm users with noise,
+- or prioritize automation over understanding.
+
+Sentinel Core was built around a different philosophy:
+
+> understand the environment first.
+
+The goal was never to create another generic AI dashboard.
+
+The goal was to build a local infrastructure partner that helps me:
+
+- understand my network
+- track operational changes
+- preserve infrastructure knowledge
+- and troubleshoot issues with context instead of guesswork
+
+This repository also documents the reasoning behind architectural, networking, and security decisions throughout the build process.
+
+---
+
+# System Overview
+
+Sentinel Core is designed for:
 
 - local-first monitoring
-- local knowledge-aware AI assistance
-- browser-based operational awareness
 - household network visibility
-- troubleshooting workflows
-- local reports and operational memory
-- strict internet boundaries
+- device awareness
+- operational summaries
+- connection monitoring
+- local report generation
+- AI-assisted troubleshooting
+- and long-term infrastructure context
 
-The system is designed to:
+Core capabilities include:
 
-- identify visible LAN devices
-- monitor gateway and DNS behavior
-- summarize active connections
-- monitor listening ports
-- store local reports
-- surface unusual changes
-- support troubleshooting workflows
-- maintain long-term household infrastructure awareness
+- identifying visible LAN devices
+- monitoring gateway and DNS behavior
+- summarizing active connections
+- monitoring listening ports
+- generating local operational reports
+- surfacing unusual changes
+- preserving known-service context
+- maintaining operational memory over time
 
-This is not intended to replace professional SIEM, EDR, or enterprise monitoring platforms.
+This is not intended to replace enterprise SIEM or EDR platforms.
 
-This is a personal infrastructure watch partner for my own environment.
-
-Use it only on networks you own or are authorized to monitor.
+Sentinel Core is intentionally personal, local, and operationally focused.
 
 ---
 
-# AI-Assisted Build Philosophy
+# Architecture Philosophy
 
-I vibe coded this.
+The system follows a local-first model.
 
-That does not mean careless.
+Current design principles include:
 
-It means I used AI intentionally to accelerate development while I focused on architecture, security boundaries, operational thinking, UX direction, and product vision.
+- local execution before cloud dependency
+- operational clarity over aggressive automation
+- explainable workflows over hidden decision-making
+- infrastructure awareness over "AI magic"
+- controlled security boundaries
+- conservative network behavior
 
-AI helped me move faster.
+The objective is not to create an autonomous security system.
 
-But:
+The objective is to create a trustworthy operational companion that helps surface meaningful information without creating unnecessary risk.
 
-- the ideas were mine
-- the research was mine
-- the expectations were mine
-- the product direction was mine
-- and the standards were mine
+---
 
-I did not stop until the system behaved the way I wanted.
+# AI-Assisted Development
+
+This project was heavily AI-assisted.
+
+I am still early in my journey within infrastructure, cybersecurity, and systems engineering, so part of this repository intentionally documents the learning process alongside the implementation.
+
+AI accelerated:
+
+- iteration
+- prototyping
+- interface refinement
+- workflow organization
+- and implementation speed
+
+But the architecture, operational direction, monitoring philosophy, security concerns, and infrastructure decisions came from me.
+
+I used AI as an accelerator — not as a replacement for judgment.
+
+One of the goals of this repository is to document not only the tooling itself, but the reasoning, tradeoffs, questions, and security considerations behind the environment over time.
 
 ---
 
 # Local Knowledge System
 
-The `knowledge/` folder is the heart of Sentinel Core.
+The `knowledge/` directory is one of the most important parts of Sentinel Core.
 
-The most important idea behind this project was creating a structured local knowledge environment that the AI can pull from.
+Instead of treating the AI like a stateless chatbot, the system uses structured local knowledge to maintain operational context about the environment it monitors.
 
-This knowledge is not only for troubleshooting.
+The knowledge system supports:
 
-It is also for:
-
-- long-term monitoring
 - device awareness
 - operational memory
-- historical understanding
-- known-services tracking
-- household infrastructure context
-
-Instead of acting like a generic chatbot with no memory of the environment, Sentinel Core uses local context to understand the home it is monitoring.
+- troubleshooting context
+- historical tracking
+- known-service awareness
+- infrastructure understanding
 
 ```text
 knowledge/
@@ -96,20 +134,22 @@ knowledge/
 └── troubleshooting-pack.md
 ```
 
+The long-term vision is to create an environment-aware assistant that can reason about local infrastructure using preserved context instead of temporary conversations.
+
 ---
 
 # Security Model
 
 Sentinel Core is intentionally conservative.
 
-Current security boundaries:
+Current security boundaries include:
 
 - local-only binding by default (`127.0.0.1`)
 - no direct public internet exposure
-- no autonomous internet browsing
-- no reckless scanning behavior
+- no autonomous browsing behavior
+- no uncontrolled scanning behavior
 - optional token-based LAN access
-- generated local reports ignored by Git
+- generated reports excluded from Git tracking
 - online research requests written to an outbox instead of automatically executed
 
 Example local-only startup:
@@ -118,35 +158,56 @@ Example local-only startup:
 python3 -m homenet_agent serve --host 127.0.0.1 --port 8773
 ```
 
-Do not expose Sentinel Core directly to the public internet.
+This project is intended only for networks you own or are authorized to monitor.
 
 ---
 
 # Browser Control Room
 
-Sentinel Core includes a premium-style browser control room inspired by Velvet Core principles:
+Sentinel Core includes a browser-based operational dashboard designed around clarity and infrastructure awareness.
 
-- dark premium interface
-- charcoal surfaces
-- brass accents
-- teal highlights
-- operational clarity over clutter
-
-The dashboard may include:
+Dashboard concepts include:
 
 - system health
-- total signals
-- completed checks
 - active connections
-- failed checks and alerts
-- critical alert tracking
 - operational summaries
+- failed checks and alerts
+- device visibility
 - reports and logs
 - knowledge access
+- monitoring workflows
 
-The goal is not to talk to a chatbot.
+The goal is not endless notifications.
 
-The goal is to interact with a household infrastructure partner.
+The goal is awareness.
+
+---
+
+# Linux Infrastructure Lab
+
+The project now includes a dedicated Ubuntu-based infrastructure lab running through UTM virtualization on Apple Silicon.
+
+The Linux environment exists to support:
+
+- network analysis
+- operational testing
+- infrastructure learning
+- future Sentinel Core integrations
+- and controlled experimentation
+
+Architecture and infrastructure decisions are documented in:
+
+```text
+docs/infrastructure/linux-lab-architecture.md
+```
+
+This includes:
+
+- virtualization decisions
+- networking choices
+- package trust concerns
+- local-first reasoning
+- and infrastructure design philosophy
 
 ---
 
@@ -159,6 +220,7 @@ The goal is to interact with a household infrastructure partner.
 ├── reports/
 ├── data/
 ├── outbox/
+├── docs/
 └── homenet_agent/
 ```
 
@@ -166,7 +228,7 @@ The goal is to interact with a household infrastructure partner.
 
 # Roadmap
 
-Things I want next:
+Planned future improvements include:
 
 - trusted device naming
 - stronger device identity mapping
@@ -174,23 +236,20 @@ Things I want next:
 - encrypted local notes
 - deeper knowledge search
 - macOS notifications
-- stricter LAN auth sessions
-- cleaner package naming
+- stricter LAN authentication
+- cleaner package structure
 - improved operational summaries
+- expanded monitoring workflows
 - stronger dashboard polish
 
 ---
 
-# My Rule For Sentinel
+# Final Principle
 
-Sentinel Core should be useful without being reckless.
-
-It should help me understand my environment without overwhelming me.
+Sentinel Core should help explain the environment without becoming noise.
 
 It should surface what matters.
 
-It should stay quiet when things are normal.
+It should stay quiet when systems are healthy.
 
-And it should ask for outside help carefully instead of pretending autonomy is intelligence.
-
-That is the Velvet Core standard.
+And it should support informed decision-making instead of pretending autonomy is intelligence.
